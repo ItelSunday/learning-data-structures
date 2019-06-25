@@ -9,7 +9,7 @@ class Queue:
     self.storage.append(item) #add item at the end
   
   def dequeue(self):
-    if self.storage:
+    if self.storage == 0:
         return self.storage.pop(0)
        #. pop() removes last element of an array, and returns elements
      
