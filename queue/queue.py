@@ -3,13 +3,27 @@ class Queue:
     self.size = 0
     # what data structure should we
     # use to store queue elements?
-    self.storage = 
+    self.storage = [] 
 
   def enqueue(self, item):
-    pass
+    self.storage.append(item) #add item at the end
   
   def dequeue(self):
-    pass
+    if self.storage:
+        return self.storage.pop(0)
+       #. pop() removes last element of an array, and returns elements
+     
 
   def len(self):
-    pass
+    return self.size
+
+#Queues are simple and intuitive to use and implement
+#list or collection with the restriction that insertion can be be performed at one end(rear)
+# and deletion can be performed at other end (front)
+
+#Operations: front(), IsEmpty()
+#Enqueue(), add item to the back 
+#Dequeue(), remove/returm item from the front
+#Time complexity // O(1)
+
+#Implementation of Queues using Array and Linkedlist
