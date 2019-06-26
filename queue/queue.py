@@ -6,16 +6,18 @@ class Queue:
     self.storage = [] 
 
   def enqueue(self, item):
-    self.storage.append(item) #add item at the end
+    self.storage.insert(self.size, item)
+    self.size += 1
   
   def dequeue(self):
-    if self.storage == 0:
-        return self.storage.pop(0)
-       #. pop() removes last element of an array, and returns elements
-     
+        if self.size > 0:
+
+            self.size -= 1
+            return self.storage.pop()
+        return None
 
   def len(self):
-    return self.size
+      return self.size
 
 #Queues are simple and intuitive to use and implement
 #list or collection with the restriction that insertion can be be performed at one end(rear)
