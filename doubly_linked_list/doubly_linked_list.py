@@ -8,7 +8,7 @@ class ListNode:
 
   """Wrap the given value in a ListNode and insert it
   after this node. Note that this node could already
-  have a next node it is point to."""
+  have a next node it points to."""
   def insert_after(self, value):
     current_next = self.next
     self.next = ListNode(value, self, current_next)
@@ -44,22 +44,55 @@ class DoublyLinkedList:
     return self.length
 
   def add_to_head(self, value):
-    pass
+    new_head = ListNode(value)
+    if (self.head == None):
+      self.tail = new_head
+      self.head = new_head
+    else:
+      new_head.next = self.head
+      self.head.prev = new_head
+      self.head = new_head
+    self.length += 1
+      
 
   def remove_from_head(self):
-    pass
-
+      removed = self.head.values
+      if self.head == self.tail:
+        self. head = None
+        self.length -= 1
+      return removed
+        
+      
+    
   def add_to_tail(self, value):
-    pass
+    new_tail = ListNode(value)
+    if (self.tail == None):
+      self.head = new_head
+      self.tail = new_tail #AAAAHHHH
+    else:
+      new_tail.next = self.tail
+      self.tail.next = new_tail
+      self.tail = new_tail
+    self.length += 1
+       
 
   def remove_from_tail(self):
-    pass
+      removed = self.tail.value
+      if self.tail == self.head:
+        self.tail = None
+        self.head = None
+        self.length = 0
+      else:
+        self.tail = self.tail.prev
+        self.tail.next.delete()
+        self.length -= 1
+      return removed
 
   def move_to_front(self, node):
     pass
 
   def move_to_end(self, node):
-    pass
+
 
   def delete(self, node):
     pass

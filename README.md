@@ -19,7 +19,7 @@ Stretch Goals:
  > NOTE: The quickest and easiest way to reliably import a file in Python is to just copy and paste the file you want to import into the same directory as the file that wants to import. This obviously isn't considered best practice, but it is the most reliable way to do it across all platforms.
 
 ### Queues
- * Should have the methods: `enqueue`, `dequeue`, and `len`.
+ * Should have the methods: `enqueue`, `dequeue`, and `len`
    * `enqueue` should add an item to the back of the queue.
    * `dequeue` should remove and return an item from the front of the queue.
    * `len` returns the number of items in the queue.
@@ -105,4 +105,4 @@ Given the above spec, try to get a working implementation that passes the tests.
 
 Once you've gotten the tests passing, it's time to analyze the runtime complexity of your `get` and `set` operations. There's a way to get both operations down to sub-linear time. In fact, we can get them each down to constant time by picking the right data structures to use. 
 
-Here are you some things to think about with regards to optimizing your implementation: If you opted to use a dictionary to work with key-value pairs, we know that dictionaries give us constant access time, which is great. It's cheap and efficient to fetch pairs. A problem arises though from the fact that dictionaries don't have any way of remembering the order in which key-value pairs are added. But we definitely need something to remember the order in which pairs are added. Can you think of some ways to get around this constaint?
+Here are you some things to think about with regards to optimizing your implementation: If you opted to use a dictionary to work with key-value pairs, we know that dictionaries give us constant access time, which is great. It's cheap and efficient to fetch pairs. A problem arises though from the fact that dictionaries don't have any way of remembering the order in which key-value pairs are added. But we definitely need something to remember the order in which pairs are added. Can you think of some ways to get around this constainT
