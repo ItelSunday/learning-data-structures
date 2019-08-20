@@ -89,13 +89,38 @@ class DoublyLinkedList:
       return removed
 
   def move_to_front(self, node):
-    pass
+    if node == self.head:
+      return
+    value = node
+    if node is self.tail()
+    else:
+      node.delete()
+      self.length -= 1
+      
+    self.add_to_head(value)
+    
 
   def move_to_end(self, node):
-
-
-  def delete(self, node):
     pass
+
+#Failing test: bugged or dependency on functions above
+  def delete(self, node):
+    if not self.head and not self.tail:
+      return
+    self.length -=1
+    if self.head == self.tail:
+      self.head = None
+      self.tail = None
+    elif self.head == node:
+      self.head = self.head.next
+      node.delete()
+    elif self.tail == node:
+      self.tail = self.tail.prev
+      node.delete()
+    else:
+      node.delete()
+      
+    
     
   def get_max(self):
     pass

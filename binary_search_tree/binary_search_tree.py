@@ -1,11 +1,17 @@
 class BinarySearchTree:
   def __init__(self, value):
-    self.value = value
+    self.value = value # Root
     self.left = None
     self.right = None
 
   def insert(self, value):
-    pass
+    if self.value:
+      if value < self.value:
+        if self.left is None:
+          else:
+            self.left.insert(value)
+            #something is missing
+          
 
   def contains(self, target):
     pass
