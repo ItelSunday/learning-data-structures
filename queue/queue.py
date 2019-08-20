@@ -6,15 +6,17 @@ class Queue:
     self.storage = [] 
 
   def enqueue(self, item):
-    self.storage.insert(self.size, item)
+    self.storage.insert(0, item)
     self.size += 1
   
   def dequeue(self):
-        if self.size > 0:
+        if not self.storage:
+          return None
 
-            self.size -= 1
-            return self.storage.pop()
-        return None
+        else:
+          self.size -= 1
+          return self.storage.pop()
+        
 
   def len(self):
       return self.size
