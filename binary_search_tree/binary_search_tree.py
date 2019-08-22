@@ -5,11 +5,10 @@ class BinarySearchTree:
     self.right = None
 
   def insert(self, value):
-    if self.value:
-      if value < self.value:
-        if self.left is None:
+    if value < self.value:
+      if self.left is None:
           else:
-            self.left.insert(value)
+          self.left.insert(value)
             #something is missing
           
 
